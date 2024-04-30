@@ -8,6 +8,26 @@
 npm install --save vue2-tinymce7
 ```
 
+## vue dev 额外工作
+
+复制`node_modules/vue2-tinymce7/dist/tinymce`到`public`下
+
+## webpack 构建配置
+
+```js
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+
+module.exports = {
+  // ...
+  plugins: [
+    // ...
+    new CopyWebpackPlugin([
+      { from: "node_modules/vue2-tinymce7/dist/tinymce", to: "tinymce" },
+    ]),
+  ],
+};
+```
+
 ## 全局导入
 
 ```js

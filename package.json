@@ -1,6 +1,6 @@
 {
   "name": "vue2-tinymce7",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "基于tinymce7适配vue2的富文本编辑器组件",
   "main": "./dist/vue2-tinymce-component-lib.common.js",
   "module": "./dist/vue2-tinymce-component-lib.umd.js",
