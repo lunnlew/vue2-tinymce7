@@ -132,12 +132,12 @@ export default {
       }
     },
     images_upload_handler(blobInfo) {
-      let file = blobInfo.blob();
+      const file = blobInfo.blob();
       return new Promise((resolve, reject) => {
         if (file.size > 1024 * 1024 * 2) {
           reject("图片大小不能超过2M");
         } else {
-          resolve(blobInfo.blobUri());
+          resolve(URL.createObjectURL(file));
         }
       });
     },

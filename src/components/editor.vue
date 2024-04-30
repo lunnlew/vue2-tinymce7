@@ -196,19 +196,19 @@ export default {
                 // 替换占位符
                 $(element).attr(
                   "style",
-                  `background:url(${this.resolveResUrl(
+                  `background:url(${that.resolveResUrl(
                     "localimage.png"
                   )}) no-repeat center center;border:1px solid #ddd`
                 );
 
                 // 有识别到的wps-rtf图片
-                if (this.tmpImages[i]) {
-                  $(element).attr("src", this.tmpImages[i]);
+                if (that.tmpImages[i]) {
+                  $(element).attr("src", that.tmpImages[i]);
                 }
               }
             });
             data.content = $.html();
-            this.tmpImages = [];
+            that.tmpImages = [];
           }
         };
       }
@@ -261,7 +261,7 @@ export default {
       }
 
       options.license_key ||= "gpl";
-      options.language ||= this.language;
+      options.language ||= 'zh_CN';
       options.language_url ||= this.resolveResUrl(
         `langs/${options.language}.js`
       );
