@@ -1,0 +1,55 @@
+{
+  "name": "vue2-tinymce7",
+  "version": "0.0.1",
+  "description": "基于tinymce7适配vue2的富文本编辑器组件",
+  "main": "./dist/vue2-tinymce-component-lib.common.js",
+  "module": "./dist/vue2-tinymce-component-lib.umd.js",
+  "exports": {
+    "import": "./dist/vue2-tinymce-component-lib.umd.js",
+    "require": "./dist/vue2-tinymce-component-lib.common.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build-lib": "vue-cli-service build --target lib --name vue2-tinymce-component-lib src/components/index.js",
+    "postinstall": "node build/copy.js"
+  },
+  "author": "lunnlew",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lunnlew/vue2-tinymce7.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "vue": "^2.7.16"
+  },
+  "devDependencies": {
+    "babel-loader": "^9.1.3",
+    "@babel/core": "^7.24.4",
+    "@vue/cli-plugin-babel": "^5.0.8",
+    "@vue/cli-service": "5.0.8",
+    "copy-webpack-plugin": "^12.0.2",
+    "vue": "^2.7.16",
+    "vue-template-compiler": "2.6.14",
+    "element-ui": "^2.11.0",
+    "tinymce": "^7.0.1"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "nano-loader": "^1.1.2"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie <=6",
+    "Android >= 4",
+    "iOS >= 7",
+    "Chrome 40.0"
+  ]
+}
